@@ -13,11 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::view('/landing', 'landing');
+Route::view('/', 'spa')->where('any', '.*');
+
+
+
+
+Route::view('/home', 'home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
