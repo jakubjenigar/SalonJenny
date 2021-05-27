@@ -60,6 +60,7 @@ Vue.component('nav-bar', require('./components/NavBar.vue').default);
 Vue.component('app', require('./views/App.vue').default);
 Vue.component('hero', require('./views/Hero.vue').default);
 Vue.component('top-btn', require('./components/TopBtn').default);
+Vue.component('services', require('./components/Services').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
