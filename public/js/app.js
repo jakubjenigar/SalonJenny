@@ -1996,6 +1996,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -6829,7 +6837,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n#sep_row{\n    background-color: #FFA000;\n    /*margin-top: -5rem;*/\n    z-index: 3;\n    height: 20rem;\n}\n.custom-shape-divider-top-1621966513 {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    overflow: hidden;\n    line-height: 0;\n    z-index: 3;\n}\n.custom-shape-divider-top-1621966513 svg {\n    position: relative;\n    display: block;\n    width: calc(100% + 1.3px);\n    height: 100px;\n}\n.custom-shape-divider-top-1621966513 .shape-fill {\n    fill: #FFFFFF;\n}\n.myParallax{\n    background-attachment:fixed;\n    background-size: 100% auto;\n}\n#hero_text{\n    font-size: 32pt;\n    font-family: Handlee, cursive;\n}\n#hero_title{\n    font-size: 48pt;\n    font-family: Handlee, cursive;\n}\n.cta{\n    font-family: Handlee, cursive;\n    font-size: 18pt;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n#sep_row{\n    background-color: #FFA000;\n    /*margin-top: -5rem;*/\n    z-index: 3;\n    height: 20rem;\n}\n.custom-shape-divider-top-1622134782 {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    overflow: hidden;\n    line-height: 0;\n}\n.custom-shape-divider-top-1622134782 svg {\n    position: relative;\n    display: block;\n    width: calc(153% + 1.3px);\n    height: 140px;\n}\n.custom-shape-divider-top-1622134782 .shape-fill {\n    fill: #FFFFFF;\n}\n.myParallax{\n    background-attachment:fixed;\n    background-size: 100% auto;\n}\n#hero_text{\n    font-size: 32pt;\n    font-family: Handlee, cursive;\n}\n#hero_title{\n    font-size: 48pt;\n    font-family: Handlee, cursive;\n}\n.cta{\n    font-family: Handlee, cursive;\n    font-size: 18pt;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38565,7 +38573,7 @@ var render = function() {
   return _c(
     "v-btn",
     {
-      staticClass: "mb-10",
+      staticClass: "mb-14",
       attrs: { fab: "", fixed: "", bottom: "", right: "" },
       on: { click: _vm.top }
     },
@@ -38621,7 +38629,22 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("v-footer", { attrs: { app: "" } })
+      _c(
+        "v-footer",
+        { attrs: { app: "" } },
+        [
+          _c(
+            "v-col",
+            { staticClass: "text-center", attrs: { cols: "12", padless: "" } },
+            [
+              _c("strong", [_vm._v("©")]),
+              _vm._v(" " + _vm._s(new Date().getFullYear()) + " — "),
+              _c("strong", [_vm._v("Salon Jenny")])
+            ]
+          )
+        ],
+        1
+      )
     ],
     1
   )
@@ -38794,7 +38817,7 @@ var render = function() {
         { attrs: { id: "sep_row" } },
         [
           _c("v-col", { staticClass: "mt--6", attrs: { xs: "12" } }, [
-            _c("div", { staticClass: "custom-shape-divider-top-1621966513" }, [
+            _c("div", { staticClass: "custom-shape-divider-top-1622134782" }, [
               _c(
                 "svg",
                 {
@@ -38808,7 +38831,10 @@ var render = function() {
                 [
                   _c("path", {
                     staticClass: "shape-fill",
-                    attrs: { d: "M649.97 0L550.03 0 599.91 54.12 649.97 0z" }
+                    attrs: {
+                      d:
+                        "M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    }
                   })
                 ]
               )

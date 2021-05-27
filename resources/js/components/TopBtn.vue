@@ -4,7 +4,7 @@
         fixed
         bottom
         right
-        class="mb-10"
+        class="mb-14"
         @click="top">
 <v-icon>keyboard_arrow_up</v-icon>
     </v-btn>
