@@ -28,6 +28,7 @@ import VueRouter from 'vue-router'
 import Home from './views/Hero';
 import NavBar from './components/NavBar';
 import App from './views/App';
+import Services from './components/Services'
 
 Vue.use(VueRouter);
 
