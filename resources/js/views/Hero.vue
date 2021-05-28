@@ -30,7 +30,7 @@
             </v-col>
 
                 <v-col md="6" class="hidden-xs-and-down pa-0 mb--16"  >
-                    <v-parallax max-height="540" max-width="540" height="640" class="text-end myParallax"
+                    <v-parallax max-height="540" max-width="540" height="900" class="text-end myParallax"
                         src="https://i.ibb.co/JrQQ0Nq/dogbg.png"
                                 style="z-index: 1">
                     </v-parallax>

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,5 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        DB::table('services')->insert([
+            'service_name' => Str::random(10),
+            'dog_size' => Str::random(10),
+            'price' => '10.00'
+        ]);
     }
 }
