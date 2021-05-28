@@ -32,6 +32,7 @@ import NavBar from './components/NavBar';
 import App from './views/App';
 import ServiceForm from "./components/ServiceForm";
 import PriceListAdmin from "./components/PriceListAdmin";
+import Services from './components/Services'
 
 Vue.use(VueRouter);
 
