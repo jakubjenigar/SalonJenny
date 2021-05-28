@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import PriceList from "./components/PriceList";
+
 require('./bootstrap');
 
 window.Vue = require('vue').default;
@@ -28,6 +30,8 @@ import VueRouter from 'vue-router'
 import Home from './views/Hero';
 import NavBar from './components/NavBar';
 import App from './views/App';
+import ServiceForm from "./components/ServiceForm";
+import PriceListAdmin from "./components/PriceListAdmin";
 
 Vue.use(VueRouter);
 
@@ -35,6 +39,9 @@ const routes = [
 
     {
         path: '/',name:('app'), component: App,
+    },
+    {
+        path: '/pricelistadmin',name:('pricelistadmin'), component: PriceListAdmin,
     },
 ]
 
@@ -61,7 +68,9 @@ Vue.component('app', require('./views/App.vue').default);
 Vue.component('hero', require('./views/Hero.vue').default);
 Vue.component('top-btn', require('./components/TopBtn').default);
 Vue.component('services', require('./components/Services').default);
-
+Vue.component('pricelist', require('./components/PriceList').default);
+Vue.component('serviceform', require('./components/ServiceForm').default);
+Vue.component('pricelistadmin', require('./components/PriceListAdmin').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
