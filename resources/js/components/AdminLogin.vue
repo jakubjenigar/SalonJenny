@@ -7,13 +7,13 @@
                     <button type="submit">Sign In</button>
             </form>
         </div>
-        <h1 v-if="$store.state.authenticated">Authenticated</h1>
     </div>
+
+
 </template>
 
 <script>
 import axios from 'axios'
-import {API_BASE_URL} from '../config'
 
 export default {
     name: 'adminlogin',
@@ -27,23 +27,19 @@ export default {
     },
     methods: {
         handleLogin() {
-            try {
-                axios.get('/sanctum/csrf-cookie').then(response => {
-                axios.post('/login', this.formData).then(respone => {
-                    this.$store.commit("setAuthentication", true);
+            axios.get('/sanctum/csrf-cookie').then(response => {
+                axios.post('/login', this.formData).then(response => {
+                    this.$store.commit("setAuthentication", true)
                     this.$router.replace({name:"admin"})
                     }
-                )})
-    //            if (succces == true){
-  //                  this.$store.commit("setAuthentication", true);
- //                   this.$router.replace({name:"admin-page"}),
- //                   succces = false
-//                }
-
-            }
-            catch (e){
-
-            }
+                )  .catch(function (error) {
+                    // handle error
+                        console.log(error.response.data)
+                        alert(error.response.data.message)
+                    }
+                )
+                }
+            )
         }
     }
 }

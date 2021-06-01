@@ -1858,7 +1858,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config */ "./resources/js/config.js");
 //
 //
 //
@@ -1872,7 +1871,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'adminlogin',
@@ -1888,21 +1887,19 @@ __webpack_require__.r(__webpack_exports__);
     handleLogin: function handleLogin() {
       var _this = this;
 
-      try {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().get('/sanctum/csrf-cookie').then(function (response) {
-          axios__WEBPACK_IMPORTED_MODULE_0___default().post('/login', _this.formData).then(function (respone) {
-            _this.$store.commit("setAuthentication", true);
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get('/sanctum/csrf-cookie').then(function (response) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post('/login', _this.formData).then(function (response) {
+          _this.$store.commit("setAuthentication", true);
 
-            _this.$router.replace({
-              name: "admin"
-            });
+          _this.$router.replace({
+            name: "admin"
           });
-        }); //            if (succces == true){
-        //                  this.$store.commit("setAuthentication", true);
-        //                   this.$router.replace({name:"admin-page"}),
-        //                   succces = false
-        //                }
-      } catch (e) {}
+        })["catch"](function (error) {
+          // handle error
+          console.log(error.response.data);
+          alert(error.response.data.message);
+        });
+      });
     }
   }
 });
@@ -40879,11 +40876,7 @@ var render = function() {
           _c("button", { attrs: { type: "submit" } }, [_vm._v("Sign In")])
         ]
       )
-    ]),
-    _vm._v(" "),
-    _vm.$store.state.authenticated
-      ? _c("h1", [_vm._v("Authenticated")])
-      : _vm._e()
+    ])
   ])
 }
 var staticRenderFns = []
