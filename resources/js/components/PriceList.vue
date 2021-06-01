@@ -1,26 +1,40 @@
 <template>
-    <div>
+    <div id="pricelist">
+        <v-row style="z-index: 1">
+
+            <v-col xs="12" md="12" class="d-flex justify-center align-center" style="z-index: 2">
+                <h1 class="hero_title">Cenník</h1>
+            </v-col>
+        </v-row>
         <div v-if="isLoading">Loading prices...</div>
-        <div v-else>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Sluzba</th>
-                        <th>Velkost psa</th>
-                        <th>Cena</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <template v-for="service in services">
-                        <tr v-bind:key="service.id">
-                            <td>{{service.service_name}}</td>
-                            <td>{{service.dog_size}}</td>
-                            <td>{{service.price}}</td>
-                        </tr>
-                    </template>
-                </tbody>
-            </table>
-        </div>
+        <v-row class="justify-center" v-else>
+            <v-col xs="12" md="6"><v-img src="https://i.ibb.co/qN2mHcw/cennik.png" style="z-index: 3"></v-img></v-col>
+            <v-col xs="12" md="6" class="d-flex justify-center align-center">
+                        <v-simple-table style="width: 100%" class="pa-6">
+                            <thead>
+                            <tr class="text-center">
+                                <th class="text-center" style="width: 40%">Sluzba</th>
+                                <th class="text-center" style="width: 30%">Velkost psa</th>
+                                <th class="text-center" style="width: 30%">Cena</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <template v-for="service in services">
+                                <tr v-bind:key="service.id">
+                                    <td class="text-center">{{service.service_name}}</td>
+                                    <td class="text-center">{{service.dog_size}}</td>
+                                    <td class="text-center">{{service.price}}</td>
+                                </tr>
+                            </template>
+                            </tbody>
+                        </v-simple-table>
+            </v-col>
+
+
+        </v-row>
+
+
+
 
     </div>
 </template>
@@ -33,7 +47,10 @@ export default {
     data() {
         return {
             isLoading: true,
-            services: {}
+            services: {},
+            filter_names: [],
+            sizes: [],
+
         }
     },
     async created() {
@@ -41,13 +58,38 @@ export default {
             const response = await axios.get(API_BASE_URL + '/services')
             this.services = response.data.data
             this.isLoading = false
+            for (var i = 0; i<this.services.length; i++){
+                if ((this.services[i].service_name != this.services[i+1].service_name) || ((i+1) == this.services.length - 1))
+                {
+                    this.filter_names.push(this.services[i].service_name)
+                    console.log(this.filter_names)
+
+
+                }
+
+            }
+
+            for (var k=0; k<this.filter_names.length; k++){
+                if (this.services[i].service_name == this.filter_names[i]){
+                    this.sizes.push([this.services[i].dog_size],[this.services[i].price])
+                }
+            }
+
+            console.log(this.filter_names)
         } catch (e){
 
         }
-    }
+
+    },
+
 }
 </script>
 
 <style scoped>
-
+#pricelist:before {
+    content: "";
+    display: block;
+    height: 200px;
+    margin: -200px 0 0;
+}
 </style>

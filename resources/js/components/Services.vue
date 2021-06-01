@@ -1,7 +1,7 @@
 <template>
-    <div style="background-color: white" id="services">
-        <div id="sep_row" class="pt-3" >
-            <v-row>
+
+<div  class="pt-3" id="services">
+            <v-row >
                 <v-col xs="12">
                     <div class="custom-shape-divider-top-1622136307">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -11,32 +11,34 @@
                 </v-col>
 
             </v-row>
+    <v-row><v-col xs="12"><v-spacer></v-spacer></v-col></v-row>
 
-            <v-row class="pt-10">
-                <v-col xs="12"><h1 class="text-center" style="font-family: Handlee, cursive; font-size: 36pt">Služby</h1></v-col>
+            <v-row>
+                <v-col xs="12" class="pt-10 pb-0 mb-n1"><h1 class="text-center hero_title" >Ako sa o Vášho psíka starám</h1></v-col>
             </v-row>
 
-            <v-row wrap class="mt-16 text-sm-center" style="z-index: 3; font-size: 20pt; font-family: Handlee, cursive">
 
-                <v-col xs="12" md="6" class="text-sm-end  pa-8">
+            <v-row wrap class="text-sm-center bg" style="z-index: 3; font-size: 14pt; font-family: Handlee, cursive">
+
+                <v-col xs="12" md="6" class="text-sm-end  pa-6 pt-10">
                     <v-icon>pets</v-icon> príjem psíka, jeho prehliadka a dohoda s majiteľom na požadovanej úprave
                 </v-col>
-                <v-col xs="12" md="6" class="text-start  pa-8">
+                <v-col xs="12" md="6" class="text-start  pa-6 pt-10">
                    <v-icon>pets</v-icon> ostrihanie srsti  na celom tele, úprava v oblasti labiek, uší, chvosta a zadku
                 </v-col>
-                <v-col xs="12" md="6" class="text-end  pa-8">
+                <v-col xs="12" md="6" class="text-end  pa-6 pt-10">
                     <v-icon>pets</v-icon> kúpanie, ošetrenie srsti kondicionérom, usušenie
                 </v-col>
-                <v-col xs="12" md="6" class="text-start  pa-8">
+                <v-col xs="12" md="6" class="text-start  pa-6 pt-10">
                     <v-icon>pets</v-icon> vyčesávanie, vytrhávanie odumretej srsti, trimovanie
                 </v-col>
-                <v-col xs="12" md="12" class="text-center  pa-8">
+                <v-col xs="12" md="12" class="text-center  pa-6 pb-10">
                     <v-icon>pets</v-icon> vyčistenie očí, uší
                 </v-col>
             </v-row>
             <v-row>
 
-                <v-col xs="12" class="pt-10 mb-3">
+                <v-col xs="12" class="pt-10 mb-6">
                     <div class="custom-shape-divider-bottom-1622150385 mb-n2">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
@@ -45,27 +47,24 @@
                 </v-col>
 
             </v-row>
+</div>
 
-        </div>
-            <v-row>
-                <v-col>Test</v-col>
-            </v-row>
-    </div>
 </template>
 <script>
 
 </script>
 
 <style>
-#sep_row{
-    background-color: #FFA000;
-    z-index: 3;
-    height: 36rem;
-}
 
-#bot_row{
-    background-color: white;
-    height: 100%;
+
+.bg{
+    background-color: #FFA000;
+}
+#services:before {
+    content: "";
+    display: block;
+    height: 200px;
+    margin: -200px 0 0;
 }
 
 
@@ -76,6 +75,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    background-color: #FFA000;
 }
 
 .custom-shape-divider-top-1622136307 svg {
@@ -96,6 +96,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    background-color: #FFA000;
 }
 
 .custom-shape-divider-bottom-1622150385 svg {
