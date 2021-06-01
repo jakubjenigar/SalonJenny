@@ -18,6 +18,8 @@
             </v-row>
 
 
+
+
             <v-row wrap class="text-sm-center bg" style="z-index: 3; font-size: 14pt; font-family: Handlee, cursive">
 
                 <v-col xs="12" md="6" class="text-sm-end  pa-6 pt-10">
