@@ -2,8 +2,8 @@
     <v-app id="inspire">
 
         <v-row id="start">
-            <v-col class="d-flex justify-center align-center" style="z-index: 2">
-                <h1 id="hero_title">Salón Jenny</h1>
+            <v-col xs="12" class="d-flex justify-center align-center" style="z-index: 2">
+                <h1 class="hero_title">Salón Jenny</h1>
             </v-col>
         </v-row>
 
@@ -20,7 +20,7 @@
                 <router-link to="#services"><v-btn rounded outlined x-large color="amber darken-4">Služby</v-btn></router-link>
             </v-col>
             <v-col xs="12" sm="12" md="3" class="d-flex justify-md-start justify-sm-center align-center align-xs-start py-1" style="z-index: 3">
-                <v-btn rounded x-large color="amber darken-2">Vytvoriť objednávku</v-btn>
+                <v-btn rounded x-large color="amber darken-2" >Vytvoriť objednávku</v-btn>
             </v-col>
 
         </v-row>
@@ -31,7 +31,7 @@
             </v-col>
 
                 <v-col md="6" class="hidden-xs-and-down pa-0 mb--16 pt-2    "  >
-                    <v-parallax max-height="540" max-width="540" height="700" class="text-end myParallax"
+                    <v-parallax max-height="540" max-width="540" height="750" class="text-end myParallax"
                         src="https://i.ibb.co/JrQQ0Nq/dogbg.png"
                                 style="z-index: 1">
                     </v-parallax>
@@ -64,11 +64,6 @@
 <!--        </v-row>-->
 
 
-
-
-
-
-
     </v-app>
 </template>
 
@@ -90,8 +85,8 @@
     font-size: 32pt;
     font-family: Handlee, cursive;
 }
-#hero_title{
-    font-size: 48pt;
+.hero_title{
+    font-size: 32pt;
     font-family: Handlee, cursive;
 }
 
