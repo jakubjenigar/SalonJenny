@@ -8,8 +8,15 @@
             <v-container fluid class="ma-0 pa-0">
                 <!-- If using vue-router -->
                 <hero></hero>
-                <services></services>
+                <about></about>
                 <top-btn></top-btn>
+                <pricelist></pricelist>
+
+
+
+
+                <services></services>
+                <gallery></gallery>
             </v-container>
         </v-main>
 

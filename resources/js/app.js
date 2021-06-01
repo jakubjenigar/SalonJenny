@@ -98,7 +98,8 @@ const router = new VueRouter({
 
 })
 
-
+Vue.component('about', require('./components/About.vue').default);
+Vue.component('gallery', require('./components/Gallery.vue').default);
 Vue.component('nav-bar', require('./components/NavBar.vue').default);
 Vue.component('app', require('./views/App.vue').default);
 Vue.component('hero', require('./views/Hero.vue').default);
