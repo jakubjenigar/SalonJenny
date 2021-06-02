@@ -1,4 +1,5 @@
 <template>
+
     <form @submit.prevent="onSubmit">
         <span class="help is-danger" v-text="errors"></span>
 
@@ -67,20 +68,21 @@ export default {
         },
         async postService() {
             this.findServiceId()
-            axios.post (API_BASE_URL + '/requests', this.$data)
-                .then(response =>{
-                    this.first_name = ''
-                    this.last_name = ''
-                    this.phone_number = ''
-                    this.date_time = ''
-                    this.service_id = ''
-                    this.isLoading = false
-                    this.$emit('completed', response.data.data)
-                })
-                .catch(error =>{
-                    this.errors = error.response.data.errors
-                    this.isLoading = false
-                })
+             axios.post(API_BASE_URL + '/requests', this.$data)
+                    .then(response => {
+                        this.first_name = ''
+                        this.last_name = ''
+                        this.phone_number = ''
+                        this.date_time = ''
+                        this.service_id = ''
+                        this.isLoading = false
+                        this.$emit('completed', response.data.data)
+                    })
+                    .catch(error => {
+                        this.errors = error.response.data.errors
+                        this.isLoading = false
+                    })
+
         }
     }
 }

@@ -1,10 +1,26 @@
 <template>
-<h1>Hello World</h1>
+    <div>
+        <pricelistadmin></pricelistadmin>
+        <v-divider></v-divider>
+        <v-divider></v-divider>
+        <requests-admin></requests-admin>
+        <v-divider></v-divider>
+        <appointment-list-admin></appointment-list-admin>
+    </div>
 </template>
 
 <script>
+import RequestsAdmin from "../components/RequestsAdmin";
+import AppointmentListAdmin from "../components/AppointmentListAdmin";
+import ServiceForm from "../components/ServiceForm";
+
 export default {
-name: "AdminPage"
+    name: "AdminPage",
+    components: {
+        ServiceForm,
+        RequestsAdmin,
+        AppointmentListAdmin,
+    },
 }
 </script>
 

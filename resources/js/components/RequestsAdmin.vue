@@ -54,14 +54,6 @@ export default {
         } catch (e){
 
         }
-
-        try {
-            const response = await axios.get(API_BASE_URL + '/appointments')
-            this.appointments = response.data.data
-            this.isLoading = false
-        } catch (e){
-
-        }
     },
 
     methods: {

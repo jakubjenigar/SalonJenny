@@ -16,7 +16,6 @@ import Vuex from 'vuex';
 
 
 
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -35,7 +34,7 @@ import ServiceForm from "./components/ServiceForm";
 import PriceListAdmin from "./components/PriceListAdmin";
 import CreateAppointmentForm from "./components/CreateAppointmentForm";
 import RequestAdmin from "./components/RequestsAdmin";
-import AppontmentListAdmin from "./components/AppontmentListAdmin";
+import AppontmentListAdmin from "./components/AppointmentListAdmin";
 import Services from './components/Services'
 import AdminLogin from "./components/AdminLogin";
 import AdminPage from "./views/AdminPage";
@@ -110,7 +109,7 @@ Vue.component('serviceform', require('./components/ServiceForm').default);
 Vue.component('pricelistadmin', require('./components/PriceListAdmin').default);
 Vue.component('create-appointment-form', require('./components/CreateAppointmentForm').default);
 Vue.component('requests-admin', require('./components/RequestsAdmin').default);
-Vue.component('appointment-list-admin', require('./components/AppontmentListAdmin').default);
+Vue.component('appointment-list-admin', require('./components/AppointmentListAdmin').default);
 Vue.component('admin-login', require('./components/AdminLogin').default);
 Vue.component('admin', require('./views/AdminPage').default)
 /**
@@ -121,10 +120,6 @@ Vue.component('admin', require('./views/AdminPage').default)
 
 const app = new Vue({
     el: '#app',
-    // methods: {
-    //     scrollToId(id) {
-    //         document.getElementById(id).scrollIntoView();
-    //     }},
     store: store,
     vuetify,
     router,

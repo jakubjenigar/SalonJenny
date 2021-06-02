@@ -22,6 +22,22 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+//
+//Route::middleware('auth:sanctum')->get('/services', function (Request $request) {
+//    return $request->user();
+//});
+//
+//Route::middleware('auth:sanctum')->get('/appointments', function (Request $request) {
+//    return $request->user();
+//});
+//
+//Route::middleware('auth:sanctum')->get('/requests', function (Request $request) {
+//    return $request->user();
+//});
+
 Route::resource('services', ServiceController::class);
 Route::resource('appointments', AppointmentController::class);
 Route::resource('requests', RequestController::class);

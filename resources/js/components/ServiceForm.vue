@@ -9,7 +9,6 @@
                 <input class="input" type="text" placeholder="enter price..." v-model="price" @keydown="errors = ''">
             </div>
         </div>
-
         <button class="button is-primary" v-bind:class="{ 'is-loading' : isLoading }">Pridat sluzbu</button>
     </form>
 </template>
