@@ -22,7 +22,7 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'firs_name' => 'required|max:255',
+            'first_name' => 'required|max:255',
             'last_name' => 'required',
             'phone_number' => 'required|max:15',
         ]);

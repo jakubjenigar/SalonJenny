@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Salon Jenny</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <div id="app" class="change_font">
     <router-view></router-view>
 </div>
-
 
 <script src="{{ mix('js/app.js') }}">
 

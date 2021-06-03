@@ -11,8 +11,8 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 import Vue from 'vue';
 import vuetify from './vuetify';
-import VueRouter from 'vue-router'
-
+import VueRouter from 'vue-router';
+import Vuex from 'vuex';
 
 
 
@@ -32,18 +32,52 @@ import NavBar from './components/NavBar';
 import App from './views/App';
 import ServiceForm from "./components/ServiceForm";
 import PriceListAdmin from "./components/PriceListAdmin";
+import CreateAppointmentForm from "./components/CreateAppointmentForm";
+import RequestAdmin from "./components/RequestsAdmin";
+import AppontmentListAdmin from "./components/AppointmentListAdmin";
 import Services from './components/Services'
+import AdminLogin from "./components/AdminLogin";
+import AdminPage from "./views/AdminPage";
 
 Vue.use(VueRouter);
+Vue.use(Vuex)
 
+const store = new Vuex.Store(
+    {
+        state: {
+            authenticated: false
+        },
+
+        mutations: {
+            setAuthentication(state, status)
+            {
+                state.authenticated = status;
+            }
+        }
+    }
+)
 const routes = [
 
     {
         path: '/',name:('app'), component: App,
     },
     {
-        path: '/pricelistadmin',name:('pricelistadmin'), component: PriceListAdmin,
+        path: '/login',
+        name: "login",
+        component: AdminLogin
     },
+    {
+        path:"/admin",
+        name: "admin",
+        component: AdminPage,
+        beforeEnter: (to, from, next) => {
+            if(store.state.authenticated == false) {
+                next("/login");
+            } else {
+                next();
+            }
+        }
+    }
 ]
 
 
@@ -73,6 +107,11 @@ Vue.component('services', require('./components/Services').default);
 Vue.component('pricelist', require('./components/PriceList').default);
 Vue.component('serviceform', require('./components/ServiceForm').default);
 Vue.component('pricelistadmin', require('./components/PriceListAdmin').default);
+Vue.component('create-appointment-form', require('./components/CreateAppointmentForm').default);
+Vue.component('requests-admin', require('./components/RequestsAdmin').default);
+Vue.component('appointment-list-admin', require('./components/AppointmentListAdmin').default);
+Vue.component('admin-login', require('./components/AdminLogin').default);
+Vue.component('admin', require('./views/AdminPage').default)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -81,10 +120,7 @@ Vue.component('pricelistadmin', require('./components/PriceListAdmin').default);
 
 const app = new Vue({
     el: '#app',
-    // methods: {
-    //     scrollToId(id) {
-    //         document.getElementById(id).scrollIntoView();
-    //     }},
+    store: store,
     vuetify,
-     router,
+    router,
 });

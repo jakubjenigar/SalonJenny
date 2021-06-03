@@ -15,12 +15,6 @@ class ServiceController extends Controller
         return new ServiceCollection(Service::all());
     }
 
-    public function create()
-    {
-        //
-    }
-
-
     public function store(Request $request)
     {
         $request->validate([
@@ -37,16 +31,6 @@ class ServiceController extends Controller
     public function show($id)
     {
         return new ServiceResource(Service::findOrFail($id));
-    }
-
-    public function edit($id)
-    {
-        //
-    }
-
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     public function destroy($id)
