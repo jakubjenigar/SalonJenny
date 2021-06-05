@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://salonjenny.herokuapp.com/api';
+export const API_BASE_URL = 'https://salonjenny.herokuapp.com/api';
