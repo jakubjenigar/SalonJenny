@@ -12,11 +12,11 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'http://salonjenny.herokuapp.com/api/requests',
-        'http://salonjenny.herokuapp.com/api/requests/*',
-        'http://salonjenny.herokuapp.com/api/services',
-        'http://salonjenny.herokuapp.com/api/services/*',
-        'http://salonjenny.herokuapp.com/api/appointments',
-        'http://salonjenny.herokuapp.com/api/appointments/*',
+        'https://salonjenny.herokuapp.com/api/requests',
+        'https://salonjenny.herokuapp.com/api/requests/*',
+        'https://salonjenny.herokuapp.com/api/services',
+        'https://salonjenny.herokuapp.com/api/services/*',
+        'https://salonjenny.herokuapp.com/api/appointments',
+        'https://salonjenny.herokuapp.com/api/appointments/*',
     ];
 }
