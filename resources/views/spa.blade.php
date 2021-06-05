@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
-<div id="app" class="change_font">
+<div id="app">
     <router-view></router-view>
 </div>
 

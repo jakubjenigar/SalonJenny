@@ -83,7 +83,6 @@ const routes = [
 
 
 const router = new VueRouter({
-    mode: 'hash',
     scrollBehavior (to, from, savedPosition) {
         if (to.hash) {
             return {
@@ -91,10 +90,9 @@ const router = new VueRouter({
                 behavior: 'smooth'
             };
         }
-        return { x: 0, y: 0 };  // Go to the top of the page if no hash
+        return { x: 0, y: 0 };  // if no id specified return to top
     },
     routes
-
 })
 
 Vue.component('about', require('./components/About.vue').default);

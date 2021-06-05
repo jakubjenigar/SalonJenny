@@ -58,24 +58,7 @@ export default {
             const response = await axios.get(API_BASE_URL + '/services')
             this.services = response.data.data
             this.isLoading = false
-            for (var i = 0; i<this.services.length; i++){
-                if ((this.services[i].service_name != this.services[i+1].service_name) || ((i+1) == this.services.length - 1))
-                {
-                    this.filter_names.push(this.services[i].service_name)
-                    console.log(this.filter_names)
 
-
-                }
-
-            }
-
-            for (var k=0; k<this.filter_names.length; k++){
-                if (this.services[i].service_name == this.filter_names[i]){
-                    this.sizes.push([this.services[i].dog_size],[this.services[i].price])
-                }
-            }
-
-            console.log(this.filter_names)
         } catch (e){
 
         }
