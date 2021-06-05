@@ -16,7 +16,7 @@
         </v-row>
 
         <v-row wrap no-gutters class="pb-10 justify-sm-center justify-md-start">
-            <v-col xs="12" sm="6" md="3" class="d-flex justify-md-end justify-end justify-sm-center align-center align-xs-end py-1 " style="z-index: 3">
+            <v-col xs="12" sm="6" md="3" class="d-flex justify-md-end justify-start justify-sm-center align-center align-xs-end py-1 " style="z-index: 3">
                 <router-link to="#pricelist"><v-btn rounded outlined x-large color="amber darken-4">Cenník</v-btn></router-link>
             </v-col>
             <v-col xs="12" sm="12" md="3" class="d-flex justify-md-start justify-sm-center align-center align-xs-start py-1" style="z-index: 3">
