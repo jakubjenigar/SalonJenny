@@ -16,14 +16,14 @@
         </v-row>
 
         <v-row wrap no-gutters class="pb-10 justify-sm-center justify-md-start">
-            <v-col xs="12" sm="6" md="3" class="d-flex justify-md-end justify-end justify-sm-center align-center align-xs-end py-1 " style="z-index: 3">
-                <router-link to="#services"><v-btn rounded outlined x-large color="amber darken-4">Služby</v-btn></router-link>
+            <v-col xs="12" sm="6" md="3" class="d-flex justify-md-end justify-start justify-sm-center align-center align-xs-end py-1 " style="z-index: 3">
+                <router-link to="#pricelist"><v-btn rounded outlined x-large color="amber darken-4">Cenník</v-btn></router-link>
             </v-col>
             <v-col xs="12" sm="12" md="3" class="d-flex justify-md-start justify-sm-center align-center align-xs-start py-1" style="z-index: 3">
 <!--                <v-btn rounded x-large color="amber darken-2" >Vytvoriť objednávku</v-btn>-->
                 <v-dialog
                     v-model="dialog"
-                    fullscreen
+                    width="unset"
                     hide-overlay
                     transition="dialog-bottom-transition"
                 >
@@ -50,16 +50,16 @@
                             >
                                 <v-icon>mdi-close</v-icon>
                             </v-btn>
-                            <v-toolbar-title>Settings</v-toolbar-title>
+                            <v-toolbar-title>Objednávka</v-toolbar-title>
                             <v-spacer></v-spacer>
                             <v-toolbar-items>
-                                <v-btn
-                                    dark
-                                    text
-                                    @click="dialog = false"
-                                >
-                                    Save
-                                </v-btn>
+<!--                                <v-btn-->
+<!--                                    dark-->
+<!--                                    text-->
+<!--                                    @click="dialog = false"-->
+<!--                                >-->
+<!--                                    Uložiť-->
+<!--                                </v-btn>-->
                             </v-toolbar-items>
                         </v-toolbar>
                         <create-appointment-form></create-appointment-form>
