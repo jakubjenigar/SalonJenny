@@ -37,7 +37,10 @@ export default {
                         console.log(error.response.data)
                         alert(error.response.data.message)
                     }
-                )
+                ).then(response => {
+                    console.log(response)
+                    console.log(this.$store.state.authenticated)
+                })
                 }
             )
         }

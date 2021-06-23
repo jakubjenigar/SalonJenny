@@ -1,4 +1,6 @@
 <template>
+
+
     <div>
         <v-form @submit.prevent="onSubmit">
             <span class="help is-danger" v-text="errors"></span>
@@ -7,6 +9,8 @@
                     <v-col cols="12" md="12">
                         <v-text-field
                             v-model="first_name"
+                            :rules="nameRules"
+                            :counter="10"
                             label="Meno"
                             required
                             @keydown="errors = ''"
@@ -16,7 +20,8 @@
                     <v-col cols="12" md="12">
                         <v-text-field
                             v-model="last_name"
-
+                            :rules="nameRules"
+                            :counter="10"
                             label="Priezvisko"
                             required
                             @keydown="errors = ''"
@@ -27,6 +32,7 @@
                         <v-text-field
                             v-model="phone_number"
                             label="Telefonne cislo"
+                            :rules="phoneRules"
                             :counter="10"
                             required
                             @keydown="errors = ''"
@@ -35,13 +41,14 @@
                     <v-col cols="12" md="4">
                         <v-select
                             v-model="service"
+                            :rules="selectRules"
                             :items="services"
                             :item-text="service => service.service_name + ' - '+ service.dog_size"
                             :error-messages="errors"
                             label="Sluzba"
                             data-vv-name="select"
-                            required>
-                        </v-select>
+                            required
+                        ></v-select>
                     </v-col>
                     <v-col class="d-flex justify-end" cols="12" md="4">
                         <v-menu
@@ -74,8 +81,7 @@
                     </v-col>
                     <v-col class="d-flex justify-end pb-6">
                     <v-btn type="submit" color="amber darken-2" large
-                           rounded class="button is-primary" @click="snackbar = true" v-bind:class="{ 'is-loading' : isLoading }"
-                    >Vytvorit rezervaciu</v-btn>
+                           rounded class="button is-primary" @click="" v-bind:class="{ 'is-loading' : isLoading }">Vytvorit rezervaciu</v-btn>
                         <v-snackbar
                             v-model="snackbar"
                         >
@@ -125,7 +131,21 @@ export default {
             menu: false,
             menu2: false,
             snackbar: false,
-            text: "Vasa rezervacia bola uspesne vytvorena"
+            text: "Vasa rezervacia bola uspesne vytvorena",
+
+            nameRules: [
+                v => !!v || 'Policko nemoze byt prazdne',
+                v => v.length <= 10 || 'Presiahli ste pocet charakterov',
+            ],
+            selectRules: [
+                v => !!v || 'Vyberte sluzbu',
+            ],
+
+            phoneRules: [
+                v => !!v || 'Policko nemoze byt prazdne',
+                v => v.length <= 10 || 'Presiahli ste pocet charakterov',
+                v => /^[0-9]/.test(v) || 'Cislo musi byt platne'
+            ],
 
         }
     },
@@ -163,15 +183,15 @@ export default {
                         this.service_id = ''
                         this.isLoading = false
                         this.$emit('completed', response.data.data)
+                        if(response.status == 201){
+                            this.snackbar = true
+                            }
                     })
                     .catch(error => {
-                        this.errors = error.response.data.errors
                         this.isLoading = false
                     })
 
         }
-
-
 
     }
 }
