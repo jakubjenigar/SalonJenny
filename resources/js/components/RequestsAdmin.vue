@@ -30,6 +30,7 @@
                 </template>
                 </tbody>
             </table>
+            <v-btn @click="refreshList">Refresh list</v-btn>
         </div>
     </div>
 </template>
@@ -58,6 +59,16 @@ export default {
 
     methods: {
 
+        async refreshList(){
+            try {
+                const response = await axios.get(API_BASE_URL + '/requests')
+                this.requests = response.data.data
+                this.isLoading = false
+            } catch (e){
+
+            }
+        },
+
         onSubmit() {
             this.isLoading = true
             this.postService()
@@ -73,6 +84,8 @@ export default {
                     this.service_id = ''
                     this.isLoading = false
                     this.$emit('completed', response.data.data)
+                    console.log(this.appointments);
+                    console.log(this.$store.state.appointments);
                 })
                 .catch(error =>{
                     this.errors = error.response.data.errors

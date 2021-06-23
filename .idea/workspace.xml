@@ -1,24 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2b37c300-a81c-4164-a309-7cdd799a670d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SalonJenny.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SalonJenny.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_24_120932_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/AdminLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/AdminLogin.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -130,27 +159,45 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
     </include_path>
   </component>
   <component name="ProjectId" id="1syvSqynBaVIshTE1YjmkZ7DBPz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Stanura" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marek\Desktop\School\PhpLaravel\SalonJenny\SalonJenny\resources\js\views" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.127.0.0.1:8000">
+    <configuration name="127.0.0.1:8000" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://127.0.0.1:8000">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.127.0.0.1:8000" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -161,6 +208,10 @@
       <option name="presentableId" value="Default" />
       <updated>1621857647248</updated>
       <workItem from="1621857648586" duration="7720000" />
+      <workItem from="1622139658432" duration="39414000" />
+      <workItem from="1622286262016" duration="20565000" />
+      <workItem from="1622470906371" duration="49138000" />
+      <workItem from="1622807717801" duration="927000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1621857817209</created>
@@ -197,28 +248,165 @@
       <option name="project" value="LOCAL" />
       <updated>1621867178673</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Service controler&#10;appointment Controller&#10;Request controller&#10;&#10;new components PriceList ServiceForms PriceListAdmin.vue&#10;&#10;CORS installed&#10;- maybe require installation&#10;&#10;Changes inside of Kernel.php">
+      <created>1622224750035</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622224750035</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Service controler&#10;appointment Controller&#10;Request controller&#10;&#10;new components PriceList ServiceForms PriceListAdmin.vue&#10;&#10;CORS installed&#10;- maybe require installation&#10;&#10;Changes inside of Kernel.php">
+      <created>1622224784900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622224784900</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Admin log in&#10;Secured admin page&#10;Appointment list&#10;Requests system&#10;&#10;Vuex required&#10;Sanctrum required">
+      <created>1622414849646</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622414849646</updated>
+    </task>
+    <task id="LOCAL-00009" summary="small changes">
+      <created>1622582873382</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622582873382</updated>
+    </task>
+    <task id="LOCAL-00010" summary="small changes">
+      <created>1622583075484</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1622583075484</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixing CSRF problem&#10;AdminPage.vue is put together">
+      <created>1622659269556</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622659269556</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="added authentication scaffolding" />
     <MESSAGE value="procfile heroku test" />
     <MESSAGE value="added postgres" />
     <MESSAGE value="testing out heroku routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing out heroku routing" />
+    <MESSAGE value="Service controler&#10;appointment Controller&#10;Request controller&#10;&#10;new components PriceList ServiceForms PriceListAdmin.vue&#10;&#10;CORS installed&#10;- maybe require installation&#10;&#10;Changes inside of Kernel.php" />
+    <MESSAGE value="Admin log in&#10;Secured admin page&#10;Appointment list&#10;Requests system&#10;&#10;Vuex required&#10;Sanctrum required" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="fixing CSRF problem&#10;AdminPage.vue is put together" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing CSRF problem&#10;AdminPage.vue is put together" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1228" y="329" key="#Web_Browsers" timestamp="1622663807040">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1228" y="329" key="#Web_Browsers/0.0.1920.1080@0.0.1920.1080" timestamp="1622663807040" />
     <state x="630" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1621864839915">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="630" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1621864839915" />
-    <state x="440" y="276" key="Vcs.Push.Dialog.v2" timestamp="1621867180451">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="1220" y="295" key="FileChooserDialogImpl" timestamp="1622663796000">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="1220" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1622663796000" />
+    <state width="458" height="360" key="GridCell.Tab.0.bottom" timestamp="1622663813797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813797" />
+    <state width="458" height="360" key="GridCell.Tab.0.center" timestamp="1622663813797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813797" />
+    <state width="458" height="360" key="GridCell.Tab.0.left" timestamp="1622663813797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813797" />
+    <state width="458" height="360" key="GridCell.Tab.0.right" timestamp="1622663813797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813797" />
+    <state width="458" height="360" key="GridCell.Tab.1.bottom" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state width="458" height="360" key="GridCell.Tab.1.center" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state width="458" height="360" key="GridCell.Tab.1.left" timestamp="1622663813797">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813797" />
+    <state width="458" height="360" key="GridCell.Tab.1.right" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state width="458" height="360" key="GridCell.Tab.2.bottom" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.2.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state width="458" height="360" key="GridCell.Tab.2.center" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.2.center/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state width="458" height="360" key="GridCell.Tab.2.left" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.2.left/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state width="458" height="360" key="GridCell.Tab.2.right" timestamp="1622663813798">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="458" height="360" key="GridCell.Tab.2.right/0.0.1920.1080@0.0.1920.1080" timestamp="1622663813798" />
+    <state x="184" y="83" key="MergeDialog" timestamp="1622583206820">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="184" y="83" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1622583206820" />
+    <state x="598" y="301" key="MultipleFileMergeDialog" timestamp="1622583268388">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="598" y="301" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1622583268388" />
+    <state x="503" y="266" key="Vcs.Push.Dialog.v2" timestamp="1622659273427">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="503" y="266" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1622659273427" />
     <state x="440" y="276" key="Vcs.Push.Dialog.v2/0.23.1680.1027@0.23.1680.1027" timestamp="1621867180451" />
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622205846997">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="777" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1622205846997" />
+    <state x="1097" y="254" key="run.anything.popup" timestamp="1622300938792">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1097" y="254" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1622300938792" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1622243334850">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1622243334850" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1622202906955" />
   </component>
 </project>

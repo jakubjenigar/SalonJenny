@@ -15,7 +15,6 @@ import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 
 
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -45,7 +44,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store(
     {
         state: {
-            authenticated: false
+            authenticated: false,
         },
 
         mutations: {

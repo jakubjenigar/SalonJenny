@@ -21,12 +21,13 @@
                         <td>{{appointment.date_time}}</td>
                         <td>{{appointment.service_id}}</td>
                         <td>
-                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(appointment.id) }" @click="deleteRequest(appointment.id)">Delete Service</button>
+                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(appointment.id) }" @click="deleteRequest(appointment.id)">Vymazat Objednavku</button>
                         </td>
                     </tr>
                 </template>
                 </tbody>
             </table>
+            <v-btn @click="refreshList">Refresh list</v-btn>
         </div>
     </div>
 </template>
@@ -57,6 +58,16 @@ export default {
         isDeleting(id){
             let index = this.appointments.findIndex(request => request.id === id)
             return this.appointments[index].isDeleting
+        },
+
+        async refreshList(){
+            try {
+                const response = await axios.get(API_BASE_URL + '/appointments')
+                this.appointments = response.data.data
+                this.isLoading = false
+            } catch (e){
+
+            }
         },
 
         async deleteRequest(id) {
