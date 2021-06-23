@@ -1,29 +1,19 @@
 <template>
-
-
     <div>
         <v-form @submit.prevent="onSubmit">
             <span class="help is-danger" v-text="errors"></span>
             <v-container>
                 <v-row class="">
-                    <v-col
-                        cols="12"
-                        md="12"
-                    >
+                    <v-col cols="12" md="12">
                         <v-text-field
                             v-model="first_name"
-
                             label="Meno"
                             required
                             @keydown="errors = ''"
                         ></v-text-field>
                     </v-col>
 
-
-                    <v-col
-                        cols="12"
-                        md="12"
-                    >
+                    <v-col cols="12" md="12">
                         <v-text-field
                             v-model="last_name"
 
@@ -33,10 +23,7 @@
                         ></v-text-field>
                     </v-col>
 
-                    <v-col
-                        cols="12"
-                        md="4"
-                    >
+                    <v-col cols="12" md="4">
                         <v-text-field
                             v-model="phone_number"
                             label="Telefonne cislo"
@@ -87,7 +74,8 @@
                     </v-col>
                     <v-col class="d-flex justify-end pb-6">
                     <v-btn type="submit" color="amber darken-2" large
-                           rounded class="button is-primary" @click="snackbar = true" v-bind:class="{ 'is-loading' : isLoading }">Vytvorit rezervaciu</v-btn>
+                           rounded class="button is-primary" @click="snackbar = true" v-bind:class="{ 'is-loading' : isLoading }"
+                    >Vytvorit rezervaciu</v-btn>
                         <v-snackbar
                             v-model="snackbar"
                         >
@@ -112,30 +100,6 @@
                 </v-row>
             </v-container>
         </v-form>
-
-<!--    <form @submit.prevent="onSubmit">-->
-<!--        <span class="help is-danger" v-text="errors"></span>-->
-
-<!--        <div class="field">-->
-<!--            <div class="control">-->
-<!--                <input class="input" type="text" placeholder="enter first name..." v-model="first_name" @keydown="errors = ''">-->
-<!--                <input class="input" type="text" placeholder="enter last name..." v-model="last_name" @keydown="errors = ''">-->
-<!--                <input class="input" type="text" placeholder="enter phone number..." v-model="phone_number" @keydown="errors = ''">-->
-<!--                <v-date-picker v-model="date_time"-->
-<!--                               color="green lighten-1"-->
-<!--                               header-color="primary" @keydown="errors = ''">-->
-<!--                </v-date-picker>-->
-<!--                <select v-model="service" @keydown="errors = ''">-->
-<!--                    <option disabled value="">Please select one</option>-->
-<!--                    <option v-for="service in services" v-bind:key="service.id">-->
-<!--                        {{service.service_name}}, {{service.dog_size}}-->
-<!--                    </option>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--        <v-btn type="submit" class="button is-primary" v-bind:class="{ 'is-loading' : isLoading }">Request appointment</v-btn>-->
-<!--    </form>-->
     </div>
 </template>
 
@@ -183,6 +147,7 @@ export default {
                 this.service_id = el.id
             }
         },
+
         onSubmit() {
             this.isLoading = true
             this.postService()

@@ -3,9 +3,10 @@
 
         <!-- Sizes your content based upon application components -->
         <v-main>
+            <v-container fluid class="ma-0 pa-0">
             <nav-bar></nav-bar>
             <!-- Provides the application the proper gutter -->
-            <v-container fluid class="ma-0 pa-0">
+
                 <!-- If using vue-router -->
                 <hero></hero>
                 <about></about>

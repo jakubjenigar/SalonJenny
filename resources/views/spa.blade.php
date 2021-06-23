@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
-<body>
+<body style="margin:0; !important">
 <div id="app">
     <router-view></router-view>
 </div>

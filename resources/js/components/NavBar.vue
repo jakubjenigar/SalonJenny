@@ -12,11 +12,11 @@
 
             <v-spacer></v-spacer>
                 <div class="hidden-sm-and-down">
-                    <router-link to="#about">  <v-btn text class="pl-2 pr-2">O mne</v-btn></router-link>
+                    <router-link to="/#about">  <v-btn text class="pl-2 pr-2">O mne</v-btn></router-link>
 
-               <router-link to="#pricelist"> <v-btn text class="pl-2 pr-2">Cenník</v-btn> </router-link>
-                    <router-link to="#services"> <v-btn text class="pl-2 pr-2">Služby</v-btn> </router-link>
-               <router-link to="#gallery"> <v-btn text class="pl-2 pr-2">Galéria</v-btn></router-link>
+               <router-link to="/#pricelist"> <v-btn text class="pl-2 pr-2">Cenník</v-btn> </router-link>
+                    <router-link to="/#services"> <v-btn text class="pl-2 pr-2">Služby</v-btn> </router-link>
+               <router-link to="/#gallery"> <v-btn text class="pl-2 pr-2">Galéria</v-btn></router-link>
                 </div>
 
             <v-menu offset-y>

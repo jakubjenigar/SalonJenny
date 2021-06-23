@@ -2,7 +2,7 @@
     <div>
         <div v-if="isLoading">Loading prices...</div>
         <div v-else>
-            <table class="table">
+            <v-simple-table class="table">
                 <thead>
                 <tr>
                     <th>Meno</th>
@@ -26,7 +26,7 @@
                     </tr>
                 </template>
                 </tbody>
-            </table>
+            </v-simple-table>
         </div>
     </div>
 </template>
