@@ -6,27 +6,27 @@
 
         <v-container>
             <v-row>
-                 <v-col cols=12 xs="12"  class="pt-8 pb-0 justify-start"><h1 class="text-center hero_title" >Pridat novu sluzbu</h1></v-col>
+                 <v-col cols=12 xs="12"  class="pt-8 pb-0 justify-start"><v-card-title class="text-center" >Pridat novu sluzbu</v-card-title></v-col>
 
                 <v-col cols=4 xs="4">
-                        <v-text-field  type="text" placeholder="enter service name..." v-model="service_name" @keydown="errors = ''">
+                        <v-text-field  type="text" placeholder="názov služby" v-model="service_name" @keydown="errors = ''">
                         </v-text-field>
                 </v-col>
                 <v-col cols=4  xs="4">
 
 
-                    <v-text-field placeholder="enter dog size..." v-model="dog_size" @keydown="errors = ''">
+                    <v-text-field placeholder="veľkosť plemena" v-model="dog_size" @keydown="errors = ''">
                     </v-text-field>
                 </v-col>
                <v-col cols=4  xs="4">
-                        <v-text-field class="input" type="text" placeholder="enter price..." v-model="price" @keydown="errors = ''">
+                        <v-text-field class="input" type="text" placeholder="cena" v-model="price" @keydown="errors = ''">
                         </v-text-field>
                </v-col>
             </v-row>
             <v-row>
                 <v-col xs="12" class="d-flex justify-end">
-                    <v-btn type="submit" color="amber darken-2" large
-                           rounded class="button is-primary"  v-bind:class="{ 'is-loading' : isLoading }"
+                    <v-btn id="addService" type="submit" large
+                           block="block" class="button is-primary"  v-bind:class="{ 'is-loading' : isLoading }"
                     >Pridat sluzbu</v-btn>
                 </v-col>
             </v-row>
@@ -88,5 +88,8 @@
 </script>
 
 <style scoped>
+#addService{
+    margin: 0 !important;
+}
 
 </style>

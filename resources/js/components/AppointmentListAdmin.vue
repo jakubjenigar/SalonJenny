@@ -2,32 +2,40 @@
     <div>
         <div v-if="isLoading">Loading prices...</div>
         <div v-else>
-            <v-simple-table class="table">
-                <thead>
-                <tr>
-                    <th>Meno</th>
-                    <th>Priezisko</th>
-                    <th>Telefon</th>
-                    <th>Datum</th>
-                    <th>Detaily</th>
-                </tr>
-                </thead>
-                <tbody>
-                <template v-for="appointment in appointments">
-                    <tr v-bind:key="appointment.id">
-                        <td>{{appointment.first_name}}</td>
-                        <td>{{appointment.last_name}}</td>
-                        <td>{{appointment.phone_number}}</td>
-                        <td>{{appointment.date_time}}</td>
-                        <td>{{appointment.service_id}}</td>
-                        <td>
-                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(appointment.id) }" @click="deleteRequest(appointment.id)">Vymazat Objednavku</button>
-                        </td>
-                    </tr>
-                </template>
-                </tbody>
-            </v-simple-table>
-            <v-btn @click="refreshList">Refresh list</v-btn>
+
+                    <v-simple-table>
+                        <template>
+                        <thead>
+                        <tr class="text-center">
+                            <th class="text-center">Služba</th>
+                            <th class="text-center">Meno</th>
+                            <th class="text-center">Priezisko</th>
+                            <th class="text-center">Telefon</th>
+                            <th class="text-center">Datum</th>
+
+                            <th class="text-center"><button @click="refreshList"><v-icon>refresh</v-icon></button></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <template v-for="appointment in appointments">
+                            <tr v-bind:key="appointment.id" class="text-center">
+                                <td class="text-center">{{appointment.service_id}}</td>
+                                <td class="text-center">{{appointment.first_name}}</td>
+                                <td class="text-center">{{appointment.last_name}}</td>
+                                <td class="text-center">{{appointment.phone_number}}</td>
+                                <td class="text-center">{{appointment.date_time}}</td>
+
+                                <td class="text-center">
+                                    <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(appointment.id) }" @click="deleteRequest(appointment.id)"><v-icon>delete</v-icon></button>
+                                </td>
+                            </tr>
+                        </template>
+                        </tbody>
+                        </template>
+                    </v-simple-table>
+
+
+
         </div>
     </div>
 </template>

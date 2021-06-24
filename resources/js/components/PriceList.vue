@@ -3,7 +3,11 @@
         <v-row style="z-index: 1">
 
             <v-col xs="12" md="12" class="d-flex justify-center align-center" style="z-index: 2">
-                <h1 class="hero_title">Cenník</h1>
+                <h1 class="text-md-h4 text-h5 changeFont"
+                    style="font-family: Amatic SC, cursive !important;
+                     font-weight: 800;
+                     font-size: 40pt !important;">
+                    Cenník</h1>
             </v-col>
         </v-row>
         <div v-if="isLoading">Loading prices...</div>
@@ -23,7 +27,7 @@
                                 <tr v-bind:key="service.id">
                                     <td class="text-center">{{service.service_name}}</td>
                                     <td class="text-center">{{service.dog_size}}</td>
-                                    <td class="text-center">{{service.price}}</td>
+                                    <td class="text-center">{{service.price}} €</td>
                                 </tr>
                             </template>
                             </tbody>
@@ -75,4 +79,18 @@ export default {
     height: 200px;
     margin: -200px 0 0;
 }
+
+td{
+
+    font-weight: 600;
+    font-family: 'Amatic SC';
+    font-size: 16pt !important;
+}
+th{
+
+    font-weight: 1000 !important;
+    font-family: 'Amatic SC';
+    font-size: 22pt !important;
+}
+
 </style>

@@ -6,9 +6,11 @@
             v-for="(item, x) in items"
             :key="x"
             class="d-flex child-flex pa-2"
+            cols="12"
+            lg="3"
             md="4"
-            xs="8"
-            cols-xs="8"
+            sm="6"
+            xs="2"
         >
             <v-img
 
@@ -71,6 +73,12 @@ export default {
                 },
                 {
                     src: 'https://i.ibb.co/mCVgdSt/dav.jpg',
+                },
+                {
+                    src: 'https://i.ibb.co/QpYGjxT/OLYMPUS-DIGITAL-CAMERA.jpg',
+                },
+                {
+                    src: 'https://i.ibb.co/w4GtpF9/OLYMPUS-DIGITAL-CAMERA.jpg',
                 },
             ],
         }

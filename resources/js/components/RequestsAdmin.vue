@@ -2,35 +2,41 @@
     <div>
         <div v-if="isLoading">Loading prices...</div>
         <div v-else>
-            <v-simple-table class="table">
+
+            <v-simple-table>
+                <template>
                 <thead>
-                <tr>
-                    <th>Meno</th>
-                    <th>Priezisko</th>
-                    <th>Telefon</th>
-                    <th>Datum</th>
-                    <th>Detaily</th>
+                <tr class="text-center">
+                    <th class="text-center">Služba</th>
+                    <th class="text-center">Meno</th>
+                    <th class="text-center">Priezisko</th>
+                    <th class="text-center">Telefon</th>
+                    <th class="text-center">Datum</th>
+
+                    <th class="text-center"></th>
+                    <th class="text-center"><button @click="refreshList"><v-icon>refresh</v-icon></button></th>
                 </tr>
                 </thead>
                 <tbody>
                 <template v-for="request in requests">
                     <tr v-bind:key="requests.id">
-                        <td>{{request.first_name}}</td>
-                        <td>{{request.last_name}}</td>
-                        <td>{{request.phone_number}}</td>
-                        <td>{{request.date_time}}</td>
-                        <td>{{request.service_id}}</td>
-                        <td>
-                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(request.id) }" @click="deleteRequest(request.id)">Delete Service</button>
+                        <td class="text-center">{{request.service_id}}</td>
+                        <td class="text-center">{{request.first_name}}</td>
+                        <td class="text-center">{{request.last_name}}</td>
+                        <td class="text-center">{{request.phone_number}}</td>
+                        <td class="text-center">{{request.date_time}}</td>
+
+                        <td class="text-center">
+                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isDeleting(request.id) }" @click="deleteRequest(request.id)"><v-icon>delete</v-icon></button>
                         </td>
                         <td>
-                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isLoading }" @click="postRequest(request),deleteRequest(request.id)">accept Service</button>
+                            <button class="button is-primary" v-bind:class="{ 'is-loading' : isLoading }" @click="postRequest(request),deleteRequest(request.id)"><v-icon>check</v-icon></button>
                         </td>
                     </tr>
                 </template>
                 </tbody>
+                </template>
             </v-simple-table>
-            <v-btn @click="refreshList">Refresh list</v-btn>
         </div>
     </div>
 </template>

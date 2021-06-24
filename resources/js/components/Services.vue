@@ -14,28 +14,32 @@
     <v-row><v-col xs="12"><v-spacer></v-spacer></v-col></v-row>
 
             <v-row>
-                <v-col xs="12" class="pt-10 pb-0 mb-n1"><h1 class="text-center hero_title" >Ako sa o Vášho psíka starám</h1></v-col>
+                <v-col xs="12" class="pt-10 pb-0"><h1 class="text-center text-md-h4 text-h5"
+                                                      style="font-family: Amatic SC, cursive !important;
+                     font-weight: 800;
+                     font-size: 40pt !important;"
+                >Ako sa o Vášho psíka starám</h1></v-col>
             </v-row>
 
 
 
 
-            <v-row wrap class="text-sm-center bg" style="z-index: 3; font-size: 14pt; font-family: Handlee, cursive">
+            <v-row class="text-sm-center bg " style="z-index: 3; font-size: 14pt; font-family: Handlee, cursive">
 
-                <v-col xs="12" md="6" class="text-sm-end  pa-6 pt-10">
-                    <v-icon>pets</v-icon> príjem psíka, jeho prehliadka a dohoda s majiteľom na požadovanej úprave
+                <v-col cols="12" xs="12" sm="12" md="6" class="pa-6 pt-10 d-flex justify-start justify-sm-center justify-md-end align-center">
+                    <v-icon cols="12" xs="12" class="pa-1">pets</v-icon> <p>príjem psíka, jeho prehliadka a dohoda s majiteľom na požadovanej úprave</p>
                 </v-col>
-                <v-col xs="12" md="6" class="text-start  pa-6 pt-10">
-                   <v-icon>pets</v-icon> ostrihanie srsti  na celom tele, úprava v oblasti labiek, uší, chvosta a zadku
+                <v-col cols="12" xs="12" sm="12" md="6" class="pa-6 pt-10 d-flex justify-start justify-sm-center justify-md-start align-center">
+                    <v-icon cols="12" xs="12" class="pa-1">pets</v-icon> <p>ostrihanie srsti  na celom tele, úprava v oblasti labiek, uší, chvosta a zadku</p>
                 </v-col>
-                <v-col xs="12" md="6" class="text-end  pa-6 pt-10">
-                    <v-icon>pets</v-icon> kúpanie, ošetrenie srsti kondicionérom, usušenie
+                <v-col cols="12" xs="12" sm="12" md="6" class="pa-6 pt-10 d-flex justify-start justify-sm-center justify-md-end align-center">
+                    <v-icon cols="12" xs="12" class="pa-1">pets</v-icon> <p>kúpanie, ošetrenie srsti kondicionérom, usušenie</p>
                 </v-col>
-                <v-col xs="12" md="6" class="text-start  pa-6 pt-10">
-                    <v-icon>pets</v-icon> vyčesávanie, vytrhávanie odumretej srsti, trimovanie
+                <v-col cols="12" xs="12" sm="12" md="6" class="pa-6 pt-10 d-flex justify-start justify-sm-center justify-md-start align-center">
+                    <v-icon cols="12" xs="12" class="pa-1">pets</v-icon> <p>vyčesávanie, vytrhávanie odumretej srsti, trimovanie</p>
                 </v-col>
-                <v-col xs="12" md="12" class="text-center  pa-6 pb-10">
-                    <v-icon>pets</v-icon> vyčistenie očí, uší
+                <v-col cols="12" xs="12" sm="12" md="12" class="pa-6  pt-10 d-flex justify-start justify-sm-center justify-md-center align-center">
+                    <v-icon cols="12" xs="12" class="pa-1">pets</v-icon> <p>vyčistenie očí, uší</p>
                 </v-col>
             </v-row>
             <v-row>
@@ -57,7 +61,11 @@
 </script>
 
 <style>
-
+p{
+    font-weight: 600;
+    font-family: 'Amatic SC';
+    font-size: 20pt !important;
+}
 
 .bg{
     background-color: #FFA000;

@@ -84,6 +84,7 @@
                            rounded class="button is-primary" @click="" v-bind:class="{ 'is-loading' : isLoading }">Vytvorit rezervaciu</v-btn>
                         <v-snackbar
                             v-model="snackbar"
+                            style="font-size:18pt !important;"
                         >
                             {{ text }}
 
@@ -198,5 +199,8 @@ export default {
 </script>
 
 <style scoped>
+v-snack__content{
+    font-size:18pt !important;
+}
 
 </style>

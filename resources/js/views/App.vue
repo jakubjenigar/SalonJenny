@@ -1,5 +1,5 @@
 <template>
-    <v-app class="change_font">
+    <v-app class="changeFont">
 
         <!-- Sizes your content based upon application components -->
         <v-main>
@@ -48,5 +48,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+h1{
+    font-family: Amatic SC, cursive !important;
+
+}
+</style>
 
 
